@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang ="ja">
+<head>
+  <meta charset="utf-8">
+  <title>ぴえんをみつけろ！</title>
+  <style>
+    html {
+    background: #FEF147;
+    padding:10px;
+    }
+    .header img {
+    width: 95.8vw;
+    }
+    body {
+      background: #ffffff;
+      border: solid 5px;
+      flex-wrap:wrap;
+    }
+    .box {
+    background: url(gurasan.png);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: 0.8s;
+    margin: 10px auto;
+    text-align: center;
+    line-height: 100px;
+    }
+    .bero{
+      background:url("bero.png");
+      background-size: cover;
+    }
+    .pien{
+      background:url("pien.png");
+      background-size: cover;
+    }
+      p.footer img {
+      width: 97.8vw;
+      }
+      p.footer {
+    margin: 9% 0;
+    background: #fef147;
+  }
+  </style>
+  <body>
+  <p class="header">
+    <img src="pienlogo.png" alt="">
+  </p>
+     <script type="text/javascript">
+       'use strict';
+       const num = 9;
+       const winner =Math.floor(Math.random() * num);
+       for(let i =0; i < num ; i++){
+       const div = document.createElement('div');
+       div.classList.add('box');
+
+       div.addEventListener('click',() =>{
+         if (i===winner){
+           div.classList.add('pien');
+         }else{
+           div.classList.add('bero');
+         }
+       } );
+       document.body.appendChild(div);}
+     </script>
+     <p class="footer">
+       <a href="https://twitter.com/mizumii3"><img src="kokoro.png" alt=""></a>
+    </p>
+  </body>
+</head>
